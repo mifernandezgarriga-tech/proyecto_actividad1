@@ -49,7 +49,7 @@ python3 informes.py
   la lista de columnas de interés de un rol (usa `map()`).
 - `aplicar_umbral(columnas, umbral)`: filtra por completitud mínima
   (usa `filter()`).
-- `ordenar_columnas(columnas, criterio="completitud", direccion="D")`:
+- `ordenar_columnas(columnas, criterio="completitud", direccion="B")`:
   ordena por nombre o completitud, ascendente o descendente.
 
 ## Bitácora
