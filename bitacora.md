@@ -8,7 +8,7 @@
   indexado por nombre de columna) porque necesito poder recorrer todas
   las columnas y ordenarlas con `sorted()`, algo que un diccionario no
   hace directamente sin convertirlo antes.
-- **Roles**: se guardan como un **diccionario** (`ROLES`) cuya clave es
+- **Roles**: se guardan como un **diccionario** (`ROLES`) , su clave es
   el nombre del rol. Elegí un diccionario porque el acceso natural es
   "dame la configuración del rol X" — acceso directo por clave, más
   simple y más rápido que recorrer una lista buscando el rol.
@@ -77,8 +77,8 @@ detectaría y qué haría para que el programa no falle?**
 `ordenar_columnas()` valida el criterio recibido: si no es `"nombre"`
 ni `"completitud"`, levanta un `ValueError` explícito en vez de fallar
 de forma confusa (por ejemplo con un `KeyError` al intentar acceder a
-una clave que no existe). Así, el programa no se rompe silenciosamente
-ni con un error críptico — el mensaje indica exactamente qué pasó y
+una clave que no existe). Así, el programa no se rompe 
+— el mensaje indica exactamente qué pasó y
 qué valores son válidos.
 
 **¿Qué cambiaría si por defecto el informe debiera salir según uno de
@@ -104,10 +104,3 @@ repetido en varios lugares), es un cambio de una sola línea.
   `roles["gerente"]`. Lo resolví agregando una validación explícita al
   principio de `generar_informe()` y `columnas_de_rol()` que levanta un
   `ValueError` con un mensaje que indica los roles disponibles.
-
----
-
-> ⚠️ **Antes de grabar el video:** repasá cada respuesta de esta
-> bitácora en tus propias palabras. En la defensa te van a pedir que
-> expliques el código y el porqué de tus decisiones — no alcanza con
-> leer esto, tenés que poder explicarlo con tus palabras.
