@@ -28,6 +28,7 @@ COLUMNAS = [
     {"nombre": "ITF",        "tipo": "int", "completitud": 82},
     {"nombre": "MAS_500",    "tipo": "str", "completitud": 95},
     {"nombre": "GDECCFR",    "tipo": "int", "completitud": 78},
+    {"nombre": "CH04", "tipo": "int", "completitud": 95},
 ]
 
 # ---------------------------------------------------------------------
@@ -43,7 +44,7 @@ ROLES = {
         "umbral": None,
     },
     "investigador": {
-        "columnas": ["ITF", "GDECCFR", "REGION", "AGLOMERADO", "TRIMESTRE", "ANO4"],
+        "columnas": ["ITF", "GDECCFR", "REGION", "AGLOMERADO", "TRIMESTRE", "ANO4", "CH04"],
         "orden": "completitud",
         "direccion": "B",
         "umbral": 70,
@@ -51,6 +52,14 @@ ROLES = {
     "analista": {
         "columnas": ["PONDERA", "ESTADO", "MAS_500", "AGLOMERADO"],
         "orden": "completitud",
+        "direccion": "B",
+        "umbral": None,
+    },
+        "auditor": {
+        "columnas": ["PONDERA", "ESTADO", "CAT_OCUP", "EDAD", "REGION",
+                     "AGLOMERADO", "ANO4", "TRIMESTRE", "ITF", "MAS_500",
+                     "GDECCFR"],
+        "orden": "nombre",
         "direccion": "B",
         "umbral": None,
     },
