@@ -133,3 +133,15 @@ ese rol como predeterminado.
   utilizarlos. Si se pide un rol que no está definido en `ROLES`, el
   programa genera un `ValueError` indicando que el rol no existe y
   mostrando cuáles son los roles disponibles.
+
+## Modificaciones de la defensa
+
+- Se agregó el rol `auditor`, configurado para visualizar todas las columnas
+  ordenadas por nombre de forma descendente.
+
+- Se agregó la columna `CH04`, de tipo `int` y con 95% de completitud,
+  y se incorporó a las columnas de interés del rol `investigador`.
+
+- Se revisó el uso de `filter()` y `map()`. Estas funciones permiten realizar
+  operaciones de filtrado y transformación directamente, evitando bucles y
+  listas auxiliares en los casos donde resultan apropiadas.
